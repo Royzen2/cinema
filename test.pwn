@@ -43,3 +43,12 @@ else
 {
   //впускаем людей
 }
+cmd:open(player_id, arg[])
+{
+  new posit, status;
+  if(sscanf(arg, "ii", posit, status)) return SendClientMessage(playerid, -1, "/open [id zal ] [ 1 - open, 0 - close]");
+  Cinema_Info[posit][open] = status; 
+  SendClientMessage(playerid, -1, "Задача выполнена");
+  return 1;
+  
+}
